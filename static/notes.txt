@@ -1,0 +1,9 @@
+1. Form submission in django
+    i.  html ma action method ra input ma name attribute hala
+    ii. models banau 
+    iii.admin ma register gara
+    iv. app ma register gara
+2. for message 
+ i. settings ma import gara 
+ ii. views ma import statement ra message lekha
+ iii. base template ma gaera hala dismissable alert

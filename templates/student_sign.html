@@ -1,0 +1,189 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlighten Online Tuition</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/enlighten.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">Enlighten Online Tuition</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="/">Home</a>
+
+
+            </nav>
+
+
+
+        </div>
+    </header>
+    <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <div class="alert alert-info" role="alert">
+                <b>Please fill the details to create an account</b><br>
+            </div>
+
+            <b><u>Basic Introduction</u></b>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName4">Name</label>
+                    <input type="text" class="form-control" id="inputName4" placeholder="Name" name="Name">
+
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="Email">
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class="form-group col-md-6">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="Address">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone</label>
+                    <input type="phone no" class="form-control" id="Phone" placeholder="9812******" name="Phone">
+                </div>
+            </div>
+
+
+            <div class=" form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="inputCity ">City</label>
+                    <input type="text " class="form-control " id="inputCity " placeholder="Kathmandu" name="City">
+                </div>
+                <div class="form-group col-md-4 ">
+                    <label for="inputCountry ">Country</label>
+                    <input type="text " class="form-control " id="inputCountry" placeholder="Nepal" name="Country">
+                </div>
+                <div class="form-group col-md-2 ">
+                    <label for="inputZip ">Zip</label>
+                    <input type="text " class="form-control " id="inputZip " placeholder="44600" name="Zip">
+                </div>
+            </div>
+            <div class=" form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="photo ">Photo</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="file" name="photo" multiple="" class="form-control" id=" id_photo_1 " name="Photo">
+                </div>
+            </div>
+
+
+
+            <hr>
+            <br>
+            <b><u> Details</u></b>
+            <div class="form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="inputdegree ">Degree Of Tutor</label>
+                    <input type="text " class="form-control " id="inputdegree " placeholder="Degree " name="Degree">
+                </div>
+                <div class="form-group col-md-6 ">
+                    <label for="inputSchool ">School of Student</label>
+                    <input type="text " class="form-control " id="inputSchool " placeholder="School " name="School">
+                </div>
+            </div>
+
+            <div class=" form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="Marksheet">Marksheet</label>
+                </div>
+                <div class="form-group col-md-6 ">
+                    <input type="file" name="Marksheet" multiple="" class="form-control" id=" id_marksheet " name="Marksheet">
+                </div>
+            </div>
+
+            <div class=" form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="Subject">Subject</label>
+                </div>
+                <div class="form-group col-md-6 ">
+                    <input type="text" name="Subject" multiple="" class="form-control" name="Subject">
+                </div>
+            </div>
+
+            <br>
+            <hr>
+            <b><u>Others</u></b>
+            <div class="form-row ">
+                <div class="form-group col-md-6 ">
+                    <label for="inputexperience ">Has the student taken tuition classes before?</label>
+                    <input type="text " class="form-control " id="inputexperience " placeholder="In years " name="Experience">
+                </div>
+                <div class="form-group col-md-6 ">
+                    <label for="Week ">Class Per Week</label>
+                    <input type="text " class="form-control " id="Week " placeholder="In Hours " name="Week">
+                </div>
+            </div>
+            Medium:<br>
+            <input type="radio" id="online" name="Medium" value="Online">
+            <label for="male">Online</label><br>
+            <input type="radio" id="Home Tuition" name="Medium" value="Home Tuition">
+            <label for="female">Home Tuition</label><br>
+            <input type="radio" id="Classroom" name="Medium" value="Classroom">
+            <label for="other">Classroom</label>
+            <br>
+
+            <button type="submit " class="btn btn-primary ">Sign in</button>
+        </form>
+        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center ">
+            <a class="text-indigo-500 ">dhakhwaros073@gmail.com</a>
+            <p class="leading-normal my-5 ">Kathmandu
+                <br>Nepal
+            </p>
+            <span class="inline-flex ">
+          <a class="text-gray-500 ">
+            <svg fill="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z "></path>
+            </svg>
+          </a>
+          <a class="ml-4 text-gray-500 ">
+            <svg fill="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z "></path>
+            </svg>
+          </a>
+          <a class="ml-4 text-gray-500 ">
+            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+              <rect width="20 " height="20 " x="2 " y="2 " rx="5 " ry="5 "></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01 "></path>
+            </svg>
+          </a>
+          <a class="ml-4 text-gray-500 ">
+            <svg fill="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z "></path>
+            </svg>
+          </a>
+        </span>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>

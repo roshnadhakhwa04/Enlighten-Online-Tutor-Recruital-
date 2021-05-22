@@ -1,0 +1,298 @@
+<!-- Template inheritanxce CWH-1:10-->
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlighten Online Tuition</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="enlighten.css">
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">Enlighten Online Tuition</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="">Home</a>
+                <a class="mr-5 hover:text-gray-900" href="#features">Features</a>
+                <a class="mr-5 hover:text-gray-900" href="#Subscribe">Subscribe</a>
+
+                <a class="mr-5 hover:text-gray-900" href="#about">About</a>
+                <a class="mr-5 hover:text-gray-900" href="#contact">Contact</a>
+            </nav>
+            <button onclick=sign() class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Sign Up
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+        </div>
+    </header>
+
+
+
+
+    {% if messages %} {% for message in messages %}
+
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %} {% endif %}
+
+
+
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" id="bbn" style="display:none">
+
+        <a class="mr-5 hover:text-gray-900" href="/student_sign"><button class="inline-flex items-center bg-gray-200 border-1 py-1 px-4 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Student
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+        </button></a>
+        <a class="mr-5 hover:text-gray-900" href="/teacher_sign"><button class="inline-flex items-center bg-gray-200 border-1 py-1 px-4 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Teacher
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+        </button></a>
+    </div>
+
+
+    <section class="text-gray-700 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="/static/ot.jpg">
+            <div class="text-center lg:w-2/3 w-full">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">ENLIGHTEN ONLINE TUITION</h1>
+                <p class="mb-8 leading-relaxed">Englighten is a free website, trusted by thousands of students and teachers, all over the world. You can find local tutors, online teachers, and teachers to help with tutoring, coaching, assignments, academic projects, and dissertations
+                    for over 4500 subjects.Our job is not to prepare for something,our job is to help students prepare themselves for anything.</p>
+                <div class="flex justify-center">
+                    <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login As A Tutor</button>
+                    <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Login As A Student</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-700 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">MAIN</h2>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900"><a name="features">Features</a></h1>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 md:w-1/3">
+                    <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                            </div>
+                            <h2 class="text-gray-900 text-lg title-font font-medium">24/7 Tutoring</h2>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="disp">
+                                24/7 Tutoring - When I was in college and high school, I would always be studying at weird times of the day. It might be 2am and I have a midterm the next day or noon on a Sunday. <span id="dots">...</span><span id="more"
+                                    style="display:none">Regardless
+                                of what subject I needed help with, I realized that scheduling a tutor was never beneficial for me as the student. Also, I often needed only 30 minutes of help or so, far less than what justifies a tutor to drive over to
+                                my house. The ability to quickly get a couple questions answered and go back to self-paced studying is paramount.</span>
+                            </p>
+                            <button class="mt-3 text-indigo-500 inline-flex items-center" onclick="myFunction()" id="myBtn">Read More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3">
+                    <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                            </div>
+                            <h2 class="text-gray-900 text-lg title-font font-medium">Virtual Classroom</h2>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="leading-relaxed text-base">
+                                With so many topics a student could need help with, it is important to have the tools available to help with every situation. The basics include text chat and document sharing but <span id="dots1">...</span> <span id="more1"
+                                    style="display:none">they should include many more such as audio / video communication, screen
+                                sharing, virtual whiteboard, text editor, and code editor. This ensures that every lesson will have all the tools to replicate the efficiency of an in-person lesson.
+
+
+                            </span>
+                            </p>
+                            <button class="mt-3 text-indigo-500 inline-flex items-center " onclick="myFunction1()" id="myBtn1">Read More
+                    <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 ml-2 " viewBox="0 0 24 24 ">
+                      <path d="M5 12h14M12 5l7 7-7 7 "></path>
+                    </svg>
+                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 ">
+                    <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col ">
+                        <div class="flex items-center mb-3 ">
+                            <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0 ">
+                                <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+                      <circle cx="6 " cy="6 " r="3 "></circle>
+                      <circle cx="6 " cy="18 " r="3 "></circle>
+                      <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12 "></path>
+                    </svg>
+                            </div>
+                            <h2 class="text-gray-900 text-lg title-font font-medium ">Tutor Biographies</h2>
+                        </div>
+                        <div class="flex-grow ">
+                            <p class="leading-relaxed text-base ">
+                                Who is your tutor? Why are they qualified? These are questions we get all the time and we wanted to create the most transparent answer to this question. This is why every <span id="dots2">...</span><span id="more2" style="display:none">tutor on TutorMe has a full biography. They talk about who they are, their passions,
+                                their interests and most importantly why they are qualified to be your tutor. In addition, they have past job experience and teaching experience as well as their university degrees. If this isn't enough, you can even see
+                                three example questions that each tutor has written. This shows their intimate knowledge of each subject they specialize in and gives a personal touch to the process.
+                            </span>
+                            </p>
+                            <button onclick="myFunction2()" id="myBtn2" class="mt-3 text-indigo-500 inline-flex items-center ">Learn More
+                                <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 ml-2 " viewBox="0 0 24 24 ">
+                                    <path d="M5 12h14M12 5l7 7-7 7 "></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-700 body-font ">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap items-center ">
+            <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 ">
+                <h1 class="title-font font-medium text-3xl text-gray-900 ">Want to get notified about my new features??</h1>
+                <p class="leading-relaxed mt-4 ">Subscribe here with your name and email to get early notifications about additional features</p>
+            </div>
+            <div class="lg:w-2/6 md:w-1/2 bg-gray-200 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 ">
+                <h2 class="text-gray-900 text-lg font-medium title-font mb-5 "><a name="Subscribe">Subscribe</a></h2>
+
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4 " placeholder="Full Name " type="text" name="name">
+                    <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mb-4 " placeholder="Email " type="email" name="email">
+                    <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg ">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-700 body-font ">
+        <div class="container px-5 py-24 mx-auto flex flex-col ">
+            <div class="lg:w-4/6 mx-auto ">
+                <div class="rounded-lg h-64 overflow-hidden ">
+                    {% load static %}
+                    <img alt="content " class="object-cover object-center h-full w-full " src="{% static '/tt.jpg' %} ">
+                </div>
+                <div class="flex flex-col sm:flex-row mt-10 ">
+                    <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8 ">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400 ">
+                            <img src="roshna.jpg ">
+                        </div>
+                        <div class="flex flex-col items-center text-center justify-center ">
+                            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg "><a name="about">Roshna Dhakhwa</a></h2>
+                            <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4 "></div>
+                            <p class="text-base text-gray-600 ">Bachelors of Computer Technology<br>Tribhuvan University</p>
+                        </div>
+                    </div>
+                    <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left ">
+                        <p class="leading-relaxed text-lg mb-4 ">Meggings portland fingerstache lyft, post-ironic fixie man bun banh mi umami everyday carry hexagon locavore direct trade art party. Locavore small batch listicle gastropub farm-to-table lumbersexual salvia messenger bag. Coloring
+                            book flannel truffaut craft beer drinking vinegar sartorial, disrupt fashion axe normcore meh butcher. Portland 90's scenester vexillologist forage post-ironic asymmetrical, chartreuse disrupt butcher paleo intelligentsia pabst
+                            before they sold out four loko. 3 wolf moon brooklyn.</p>
+                        <a class="text-indigo-500 inline-flex items-center ">Portfolio
+                  <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 ml-2 " viewBox="0 0 24 24 ">
+                    <path d="M5 12h14M12 5l7 7-7 7 "></path>
+                  </svg>
+                </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-700 body-font relative ">
+        <div class="container px-5 py-24 mx-auto ">
+            <div class="flex flex-col text-center w-full mb-12 ">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 "><a name="contact">Contact</a></h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base ">For any Queries or Suggestions,</p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto ">
+
+                <form action="" method="POST"> {% csrf_token %}
+                    <div class="flex flex-wrap -m-2 ">
+                        <div class="p-2 w-1/2 ">
+                            <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 " placeholder="Name " type="text " name="Name">
+                        </div>
+                        <div class="p-2 w-1/2 ">
+                            <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 " placeholder="Email " type="email" name="Email">
+                        </div>
+                        <div class="p-2 w-full ">
+                            <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block " placeholder="Message" name="Message"></textarea>
+                        </div>
+                        <div class="p-2 w-full ">
+                            <button name="contact" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg " type="Submit">Send</button>
+                        </div>
+                </form>
+                <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center ">
+                    <a class="text-indigo-500 ">dhakhwaros073@gmail.com</a>
+                    <p class="leading-normal my-5 ">Kathmandu
+                        <br>Nepal
+                    </p>
+                    <span class="inline-flex ">
+                  <a class="text-gray-500 ">
+                    <svg fill="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z "></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 ">
+                    <svg fill="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z "></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 ">
+                    <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+                      <rect width="20 " height="20 " x="2 " y="2 " rx="5 " ry="5 "></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01 "></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 ">
+                    <svg fill="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-5 h-5 " viewBox="0 0 24 24 ">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z "></path>
+                    </svg>
+                  </a>
+                </span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+    <script src="/static/enlighten.js">
+    </script>
+</body>
+
+</html>
